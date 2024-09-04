@@ -1,0 +1,346 @@
+/* style.css */
+
+/* 
+Project Color Theme:
+- Primary Color: Blue
+> Button Background: #007bff (a bright, vibrant blue)
+> Button Hover: #0056b3 (a darker blue for hover effect)
+> Section Headings: #007bff (the same blue as the button background)
+
+- Text Colors:
+> Main Header (h1): #333 (dark grey, almost black, for strong readability)
+> Paragraph Text: #666 (lighter grey for less emphasis)
+
+- Background Color:
+> Header Background: #f8f9fa (light grey)
+
+- Border Color:
+> Header Bottom Border: #e1e1e1 (a very light grey for subtle separation)
+*/
+
+/* General Body Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Set a clean, sans-serif font for the whole page "Arial" */
+    line-height: 1.6;
+    /* Increase line spacing for readability */
+    margin: 0;
+    /* Remove default margin (around 8px) that is set by browser */
+    color: #333;
+    /* Set a dark grey color for the text */
+    background-color: #f4f4f4;
+    /* Light grey background color */
+}
+
+/* Basic styling for the container to center the content */
+.container {
+    /* The container will take up 90% of the available width of the viewport */
+    width: 90%;
+    /* The container will not exceed 1200 pixels in width, ensuring it looks good on large screens */
+    max-width: 1200px;
+    /* Centers the container horizontally */
+    margin: 0 auto;
+    /* Adds some space inside the container to ensure the content doesn’t touch the edges */
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #f8f9fa;
+    /* Light grey background */
+    padding: 20px 0;
+    /* Vertical padding for spacing */
+    border-bottom: 1px solid #e1e1e1;
+    /* Light border for separation */
+}
+
+header h1 {
+    text-align: center;
+    /* Center-align the main header */
+    color: #333;
+    /* Dark text color */
+    margin: 0;
+    /* Removes default margin to avoid extra space */
+}
+
+.header-options {
+    display: flex;
+    /* flex: Uses flexbox to lay out the header sections */
+    justify-content: space-around;
+    /* Space items evenly */
+    margin-top: 20px;
+    /* Space below the header text */
+}
+
+/* 
+.header-options > div selector:
+Targets the immediate child <div> elements within the .header-options container
+
+">":
+This selector helps in precisely targeting and styling the direct child <div> elements within the .header-options container, 
+ensuring that each section is styled consistently without affecting other elements that might not be direct children.
+*/
+.header-options>div {
+    text-align: center;
+    /* Center-align text within each section */
+}
+
+.header-options h2 {
+    margin-bottom: 10px;
+    /* Space below the section heading */
+    color: #007bff;
+    /* Blue color for headings */
+}
+
+.header-options p {
+    color: #666;
+    /* Light grey text color */
+}
+
+.header-options button {
+    background-color: #007bff;
+    /* Blue background */
+    color: #fff;
+    /* White text */
+    border: none;
+    /* Remove default border */
+    padding: 10px 20px;
+    /* Padding for the button */
+    cursor: pointer;
+    /* cursor: Changes the cursor to a pointer on hover */
+    border-radius: 5px;
+    /* Rounded corners => Rounding the button corners */
+    font-size: 16px;
+    /* Font size */
+}
+
+.header-options button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px 0;
+    /* Vertical padding for spacing */
+}
+
+.book-list {
+    /* 
+    Using again CSS3 flex rules to center the button inside:
+    */
+
+    /* 
+    Flexbox Method: 
+    Using display: flex on the .book-item container makes it a flex container
+    flex-direction: column stacks child elements vertically, while align-items: center centers them horizontally
+    */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    gap: 20px;
+    /* Space between book cards */
+    justify-content: center;
+    /* Center-align the book cards */
+}
+
+.book-item {
+    background-color: #fff;
+    /* White background for book items */
+    border: 1px solid #ddd;
+    /* Light grey border */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 15px;
+    /* Padding inside the card */
+    width: 300px;
+    /* Fixed width for consistency */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    text-align: left;
+    /* Center text */
+}
+
+.book-item h3 {
+    margin: 0 0 10px;
+    /* Remove top margin and add space below */
+    color: #333;
+    /* Dark text color */
+}
+
+.book-item p {
+    margin: 0 0 10px;
+    /* Remove top margin and add space below */
+    color: #666;
+    /* Light grey text color */
+}
+
+.button-container {
+    text-align: center;
+    /* Center-align contents of the button container */
+    margin-top: 10px;
+    /* Space above the button container */
+}
+
+.button-container button {
+    display: inline-block;
+    /* Ensure button is treated as inline-block element */
+}
+
+.book-item .read-more {
+    display: inline-block;
+    /* Make link behave like a button */
+    color: #007bff;
+    /* Blue color for the link */
+    text-decoration: none;
+    /* Remove underline */
+    border: 1px solid #007bff;
+    /* Blue border */
+    padding: 5px 10px;
+    /* Padding inside the link */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Font size */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
+}
+
+.book-item .read-more:hover {
+    background-color: #007bff;
+    /* Blue background on hover */
+    color: #fff;
+    /* White text on hover */
+}
+
+/* 
+Styling the button#load-more:
+*/
+#load-more {
+    display: block;
+    /* Make button take full width */
+    margin: 20px auto;
+    /* Center-align the button with space above and below */
+    background-color: #007bff;
+    /* Blue background */
+    color: #fff;
+    /* White text */
+    border: none;
+    /* Remove default border */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    text-align: center;
+    /* Center-align the text */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+    /* 
+    Link: https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+    */
+}
+
+#load-more:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007bff;
+    /* Blue background for the footer */
+    color: #fff;
+    /* White text color */
+    padding: 20px 0;
+    /* Padding above and below */
+    text-align: center;
+    /* Center-align the text */
+}
+
+footer p {
+    margin: 10px 0;
+    /* Space above and below paragraphs */
+}
+
+footer a {
+    color: #fff;
+    /* White text color for links */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.social-media a {
+    color: #fff;
+    /* White text color for social media links */
+    margin: 0 10px;
+    /* Space between social media links */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+
+button {
+    background-color: #007bff;
+    /* Button background color */
+    color: #fff;
+    /* Text color */
+    border: none;
+    /* Remove default border */
+    padding: 10px 20px;
+    /* Button padding */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker background on hover */
+}
+
+
+/* 
+Responsive Design
+*/
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .book-item {
+        width: 100%;
+        /* Full width on small screens */
+        padding: 10px;
+        /* Less padding */
+    }
+
+    .header-options {
+        flex-direction: column;
+        /* Stack header sections vertically */
+        text-align: center;
+        /* Center-align text */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 900px) {
+    .book-item {
+        width: 45%;
+        /* Adjust width for tablets */
+    }
+}

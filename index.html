@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        Meta Tags:
+        - charset: Defines the character encoding
+        - viewport: Ensures proper scaling on mobile devices for RWD
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        Page Title:
+        - Displays the title of the webpage in the browser tab
+        - Also used for bookmarking
+    -->
+    <title>Book Lovers Club</title>
+
+    <!-- 
+        Link to External CSS:
+        - Connects the styles.css file for styling the page
+    -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 
+        Main Content Goes Here
+    -->
+
+    <!-- Header Section -->
+    <header>
+        <!-- 
+            We have two sections in the header: 
+            > One section for readers and one for authors
+            > Each section has a brief description and a button
+        -->
+        <div class="container">
+            <h1>Welcome to the Book Lovers Club</h1>
+            <div class="header-options">
+                <div class="for-readers">
+                    <h2>For Readers</h2>
+                    <p>Discover book recommendations from fellow readers.</p>
+                    <button>Browse Books</button>
+                </div>
+                <div class="for-authors">
+                    <h2>For Authors</h2>
+                    <p>Submit your books for others to read and review.</p>
+                    <button>Submit a Book</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- 
+            This section includes the "Recent Book Recommendations" with three example books
+            Each book has its title, genre, author, brief description, 
+            and a button to read more details
+        -->
+        <div class="container">
+            <h2>Recent Book Recommendations</h2>
+
+            <!-- Book Listings (hardcoded at the beginning) -->
+            <div class="book-list">
+                <!-- Book Item 1 -->
+                <div class="book-item">
+                    <h3>The Great Gatsby</h3>
+                    <p><strong>Genre:</strong> Fiction</p>
+                    <p><strong>Author:</strong> Alex Chow</p>
+                    <p>A novel set in the Roaring Twenties that critiques the American Dream.</p>
+                    <p><strong>Rating:</strong> 4.5/5</p>
+                    <div class="button-container"> <!-- New container for button -->
+                        <button>Read More</button>
+                    </div>
+                </div>
+
+                <!-- Book Item 2 -->
+                <div class="book-item">
+                    <h3>Atomic Habits</h3>
+                    <p><strong>Genre:</strong> Self-help</p>
+                    <p><strong>Author:</strong> Sam Simpson</p>
+                    <p>A practical guide to building good habits and breaking bad ones.</p>
+                    <p><strong>Rating:</strong> 4.8/5</p>
+                    <div class="button-container"> <!-- New container for button -->
+                        <button>Read More</button>
+                    </div>
+                </div>
+
+                <!-- Book Item 3 -->
+                <div class="book-item">
+                    <h3>To Kill a Mockingbird</h3>
+                    <p><strong>Genre:</strong> Fiction</p>
+                    <p><strong>Author:</strong> Sarah Grays</p>
+                    <p>A profound novel that addresses the racial inequalities of the American South.</p>
+                    <p><strong>Rating:</strong> 5/5</p>
+                    <div class="button-container"> <!-- New container for button -->
+                        <button>Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button to load more books -->
+            <!--  
+                This button can be used to load more books 
+                (this can be dynamically generated later from a JSON file):
+                > aria-label: Provides a label for screen readers
+                > role: Specifies the role of the button
+            -->
+            <button id="load-more" aria-label="Load more books" role="button">Load More Books</button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Book Lovers Club. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@bookloversclub.com">info@BookLoversClub.com</a></p>
+            <div class="social-media">
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading our JS script file: -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
